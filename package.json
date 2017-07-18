@@ -19,6 +19,7 @@
     "glob": "^7.1.2",
     "js-yaml": "^3.9.0",
     "mocha": "^3.4.2",
+    "mocha-webpack": "^0.7.0",
     "node-sass": "^4.5.3",
     "path-complete-extname": "^0.1.0",
     "postcss-loader": "^2.0.6",
@@ -36,9 +37,10 @@
     "webpack-merge": "^4.1.0"
   },
   "devDependencies": {
+    "avoriaz": "^2.4.4",
     "webpack-dev-server": "^2.5.1"
   },
   "scripts": {
-    "test": "mocha-webpack test/**/*.spec.js --recursive"
+    "test": "mocha-webpack --webpack-config test/javascript/webpack.test.config.js test/**/*.spec.js --recursive --require test/javascript/.setup"
   }
 }
